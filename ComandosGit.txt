@@ -1,0 +1,4 @@
+para ver la historia de un archivo
+git log <filename>
+#me muestra al version del archivo
+git show <filename>

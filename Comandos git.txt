@@ -1,0 +1,9 @@
+para ver la historia de un archivo
+git log <filename>
+#me muestra al version del archivo
+git show <filename>
+#para agreagar los cambios 
+git add .
+
+# para ver el cmabion entre los archivos que a los que le has hecho commit
+git diff <codigod el commit que quieres compars 220de334> <codigo del commint contra el que vas a comparrlo>
