@@ -42,3 +42,8 @@ y luego ahcerle un merge
 git reset <id del commit al que queremos volver>
 tipos de reset
 git reset <id del commit al que queremos volver> --hard todo vuelve al estado anterior es el mas pegtiloaso
+git reset <id del commit al que queremos volver> --soft manyiene en satgging lo quw esta en stagging
+--------------------------------------------------------------------------------
+git log //ver los cambios generales
+git los --stat //ver los cambios por achivos
+
