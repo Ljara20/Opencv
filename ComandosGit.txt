@@ -46,4 +46,7 @@ git reset <id del commit al que queremos volver> --soft manyiene en satgging lo 
 --------------------------------------------------------------------------------
 git log //ver los cambios generales
 git los --stat //ver los cambios por achivos
-
+----------------------------------para ver como era un archivo antes--------------------------------------
+git checkout <id del commit > <nameo_of_file>
+si uso en ves del commit el master puedo volver al la utlima verison del archivo con
+git checkout master <archivo>
