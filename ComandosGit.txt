@@ -1,3 +1,5 @@
+# para crear el repositorio 
+git init
 para ver la historia de un archivo
 git log <filename>
 #me muestra al version del archivo
@@ -7,3 +9,36 @@ git add .
 
 # para ver el cmabion entre los archivos que a los que le has hecho commit
 git diff <codigod el commit que quieres compars 220de334> <codigo del commint contra el que lo vas a comparar>
+
+cuando escribes add ela rchivo pasa de ram a vivier en el stage
+para removerlo puedes usar el comando 
+git rm <file name>
+
+dupiniendo que no lo remuesves y hace un commit , el por defecto se va al master del repositrosio
+git commit -m "mensaje"
+
+una ves que haces add el archivo savr que hay cmabios y se va a staging , la 
+unica forma de saber que esta staging o area temporal es con el add
+
+cuando damos commit pasa de estar en estaging al repositorio 
+
+que pasa cuando quieres trerte un cambio en el repositorio que no esta entu carpeta ,
+vas a esa rama uy usachar el comoando checkout
+
+git checkout  
+
+cada ves que haces un commit creas una nueva version 
+puedes crear tantas como quieras hasta tener la verison actual 
+
+resulta que eun un punto en la v3 decidiste hacer cambios por tu propia cuenta
+cpias la version actual o anterio  del master para crear el experimental 
+
+si necesitas arlgar un bug de la ramar actual deberias crear una rama bugfixind
+y luego ahcerle un merge
+
+
+
+------------------volver a una version anterior de un commit------------------
+git reset <id del commit al que queremos volver>
+tipos de reset
+git reset <id del commit al que queremos volver> --hard todo vuelve al estado anterior es el mas pegtiloaso
