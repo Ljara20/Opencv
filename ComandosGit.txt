@@ -50,3 +50,11 @@ git los --stat //ver los cambios por achivos
 git checkout <id del commit > <nameo_of_file>
 si uso en ves del commit el master puedo volver al la utlima verison del archivo con
 git checkout master <archivo>
+
+----------------------------------------------------------------------------------------------------------
+con git push manto todo al repositorio remoto
+con el comanod pull copio el repositorio local y de lo ultimo que apso en el repositorio
+-----------------------------------------------------
+la rma hace una copia del umtimo commit
+com git commit -am hace add directamente sobre los achivos que modificaste que no son comopletamente nuevos mas el commit
+----------------------------------------------------------------------------------------------------------------------------
