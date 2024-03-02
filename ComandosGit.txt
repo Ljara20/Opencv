@@ -46,6 +46,7 @@ git reset <id del commit al que queremos volver> --soft manyiene en satgging lo 
 --------------------------------------------------------------------------------
 git log //ver los cambios generales
 git los --stat //ver los cambios por achivos
+git show //muestra el utlimo cambio y le header
 ----------------------------------para ver como era un archivo antes--------------------------------------
 git checkout <id del commit > <nameo_of_file>
 si uso en ves del commit el master puedo volver al la utlima verison del archivo con
@@ -58,3 +59,10 @@ con el comanod pull copio el repositorio local y de lo ultimo que apso en el rep
 la rma hace una copia del umtimo commit
 com git commit -am hace add directamente sobre los achivos que modificaste que no son comopletamente nuevos mas el commit
 ----------------------------------------------------------------------------------------------------------------------------
+Ramas                |
+----------------------
+las ramas se crean desde la version donde estoy
+para crar laa rama
+usar : git branch <nombre_que uieres colocar ala rama>
+con  : git checkout puedo cambiarme de rama haciendo
+git checkout <nombre_rama_a_la_que_quieres cambiar>
