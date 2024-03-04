@@ -154,3 +154,8 @@ Tildar en repo y luego click en el botón verde Generate token
 
 ------------------------------------------------------------------------------------------------
 Desde el 1 de octubre de 2020 GitHub cambió el nombre de la rama principal: ya no es “master” -como aprenderás en el curso- sino main.
+
+---------------------------------
+como agregar la infor del nuestro repo local a la nuve de git hup:
+hacemos el comando
+git remote add origin <direccion htttps deñ repo>
