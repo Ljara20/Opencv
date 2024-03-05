@@ -159,3 +159,6 @@ Desde el 1 de octubre de 2020 GitHub cambió el nombre de la rama principal: ya 
 como agregar la infor del nuestro repo local a la nuve de git hup:
 hacemos el comando
 git remote add origin <direccion htttps deñ repo>
+------------------------------------------------------------------------------------------------------
+antes de ahcer un commit hacer
+git pull SG
