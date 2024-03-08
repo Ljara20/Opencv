@@ -66,3 +66,146 @@ para crar laa rama
 usar : git branch <nombre_que uieres colocar ala rama>
 con  : git checkout puedo cambiarme de rama haciendo
 git checkout <nombre_rama_a_la_que_quieres cambiar>
+---------------------------------------------------------------------------
+cuando se hace un merge la bracnh desaprece y se fusiona con el asmter
+el merge siemprese ahce desde don esstoy
+--------------------------------------------------------------------------------------------------------------------------
+Cómo revertir un merge
+Si nos hemos equivocado y queremos cancelar el merge, debemos usar el siguiente comando:
+
+git merge --abort
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Conflictos en repositorios remotos
+Al trabajar con otras personas, es necesario utilizar un repositorio remoto.
+­
+-Para copiar el repositorio remoto al directorio de trabajo local, se utiliza el comando git clone <url>, y para enviar cambios al repositorio remoto se utiliza git push.
+-Para actualizar el repositorio local se hace uso del comando git fetch, luego se debe fusionar los datos traídos con los locales usando git merge.
+
+Para traer los datos y fusionarlos a la vez, en un solo comando, se usa git pull.
+­- Para crear commits rápidamente, fusionando git add y git commit -m "", usamos git commit -am "".
+­- Para generar nuevas ramas, hay que posicionarse sobre la rama que se desea copiar y utilizar el comando git branch <nombre>.
+Para saltar entre ramas, se usa el comando git checkout <branch>
+­- Una vez realizado los cambios en la rama, estas deben fusionarse con git merge.
+El merge ocurre en la rama en la que se está posicionado. Por lo tanto, la rama a fusionar se transforma en la principal.
+Los merges también son commits.
+Los merges pueden generar conflictos, esto aborta la acción y pide que soluciones el problema manualmente, aceptando o rechazando los cambios que vienen.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+la llave privada sirve para
+
+----------------------------------------
+para lsitar mi entorno local usar git config -l
+
+.---------------------------------------------------
+Cómo generar tus llaves SSH
+1. Generar tus llaves SSH**
+Recuerda que es muy buena idea proteger tu llave privada con una contraseña.
+ssh-keygen -t rsa -b 4096 -C "tu@email.com"
+
+2. Terminar de configurar nuestro sistema.
+En Windows y Linux:
+
+Encender el “servidor” de llaves SSH de tu computadora:
+eval $(ssh-agent -s)
+
+Añadir tu llave SSH a este “servidor”:
+ssh-add ruta-donde-guardaste-tu-llave-privada
+-----------------------------------------------------------------------------
+GitHub es una plataforma que nos permite guardar repositorios de Git que podemos usar como servidores remotos y ejecutar algunos comandos de forma visual e interactiva (sin necesidad de la consola de comandos).
+
+Luego de crear nuestra cuenta, podemos crear o importar repositorios, crear organizaciones y proyectos de trabajo, descubrir repositorios de otras personas, contribuir a esos proyectos, dar estrellas y muchas otras cosas.
+
+El README.md es el archivo que veremos por defecto al entrar a un repositorio. Es una muy buena práctica configurarlo para describir el proyecto, los requerimientos y las instrucciones que debemos seguir para contribuir correctamente.
+
+Para clonar un repositorio desde GitHub (o cualquier otro servidor remoto) debemos copiar la URL (por ahora, usando HTTPS) y ejecutar el comando git clone + la URL que acabamos de copiar. Esto descargará la versión de nuestro proyecto que se encuentra en GitHub.
+
+Sin embargo, esto solo funciona para las personas que quieren empezar a contribuir en el proyecto.
+
+Cómo conectar un repositorio de GitHub a nuestro documento local
+Si queremos conectar el repositorio de GitHub con nuestro repositorio local, que creamos usando el comando git init, debemos ejecutar las siguientes instrucciones:
+
+Guardar la URL del repositorio de GitHub con el nombre de origin
+git remote add origin URL
+Verificar que la URL se haya guardado correctamente:
+git remote
+git remote -v
+Traer la versión del repositorio remoto y hacer merge para crear un commit con los archivos de ambas partes. Podemos usar git fetch y git merge o solo git pull con el flag --allow-unrelated-histories:
+git pull origin master --allow-unrelated-histories
+Por último, ahora sí podemos hacer git push para guardar los cambios de nuestro repositorio local en GitHub:
+git push origin master
+Cómo autenticarte en GitHub 2022
+Antes de empezar debemos renombrar la rama ‘máster’ a ‘main’, este es el nuevo estándar en GitHub, para esto:
+
+Primero nos posicionamos en la rama a la que queremos cambiarle el nombre.
+Ejecutamos el siguiente comando: git branch -M main
+Pasos para crear un token de acceso personal.
+
+Desde el 2022 GitHub ya no deja hacer el push con la contraseña del propio GitHub, para esto tenemos que crear un token, y este token es la contraseña que vamos a colocar cuando nos pida clave.
+
+Descubre el uso de tags en Github
+
+Seguir la secuencia: Ingresamos a nuestra cuenta de GitHub.
+
+Buscamos Settings
+Click en Developer settings
+Click en Personal access tokens
+Click en Generate new token aquí se puede colocar un nombre, la fecha de expiración.
+Tildar en repo y luego click en el botón verde Generate token
+
+
+------------------------------------------------------------------------------------------------
+Desde el 1 de octubre de 2020 GitHub cambió el nombre de la rama principal: ya no es “master” -como aprenderás en el curso- sino main.
+
+---------------------------------
+como agregar la infor del nuestro repo local a la nuve de git hup:
+hacemos el comando
+git remote add origin <direccion htttps deñ repo>
+------------------------------------------------------------------------------------------------------
+antes de ahcer un commit hacer
+git pull 
+------------------------------------------------------------------------------------------------------------------------------------
+git log --all --graph --decorate ---oneline parra mirar todos los cmabios realizados en forma de grafo 
+-----------------------------------------------------------------------------------------------------------------------------------
+creacion de tags 
+------------------------------------------------------------
+git tag -a v0.1 -m  <mensaje agregado>
+exmaple:
+git tag -a v0.1 -m "primeros comandos de git"
+git tag ,  muestra la lista de todos los tags 
+para mirar con que commit esta relacionado un tag
+git show-ref --tags
+---------------------------------------------------------
+para ver que todo loq ue esta en intener traeresles usar el comando
+git pull  origin master or in new version s main
+git push origin --tags
+----------------------------------------------------------------------
+como borrar un tag
+git tag -d <nombre del tag> 
+git push origin  :refs/tags/<nombre del tag que quiere borrar>
+-----------------------------------------------------------------------
+git show-branch --all  nos muestra la historia de las ramas
+gitk te abhre de manera visual la hsitoria de las rams y cambios
+para subir  la rama al server:
+git push origin <nombre de la rama>
+
+--------------------------------------------------------------------------
+Si no te funciona el comando gitk es posible no lo tengas instalado por defecto.
+Para instalar gitk debemos ejecutar los siguientes comandos:
+sudo apt-get update
+sudo apt-get install gitk
+
+Repasa: ¿Qué es Git?
+
+Las ramas nos permiten hacer cambios a nuestros archivos sin modificar la versión principal (master). Puedes trabajar con ramas que nunca envías a GitHub, así como pueden haber ramas importantes en GitHub que nunca usas en el repositorio local. Lo crucial es que aprendas a manejarlas para trabajar profesionalmente.
+
+Si, estando en otra rama, modificamos los archivos y hacemos commit, tanto el historial(git log) como los archivos serán afectados. La ventaja que tiene usar ramas es que las modificaciones solo afectarán a esa rama en particular. Si luego de “guardar” los archivos(usando commit) nos movemos a otra rama (git checkout otraRama) veremos como las modificaciones de la rama pasada no aparecen en la otraRama.
+
+Comandos para manejo de ramas en GitHub
+Crear una rama:
+git branch branchName
+Movernos a otra rama:
+git checkout branchName
+Crear una rama en el repositorio local:
+git branch nombre-de-la-rama o git checkout -b nombre-de-la-rama.
+Publicar una rama local al repositorio remoto:
+git push origin nombre-de-la-rama.
+Recuerda que podemos ver gráficamente nuestro entorno y flujo de trabajo local con Git utilizando el comando gitk. Gitk fue el primer visor gráfico que se desarrolló para ver de manera gráfica el historial de un repositorio de Git.
