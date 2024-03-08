@@ -161,4 +161,19 @@ hacemos el comando
 git remote add origin <direccion htttps deñ repo>
 ------------------------------------------------------------------------------------------------------
 antes de ahcer un commit hacer
-git pull SG
+git pull 
+------------------------------------------------------------------------------------------------------------------------------------
+git log --all --graph --decorate ---oneline parra mirar todos los cmabios realizados en forma de grafo 
+-----------------------------------------------------------------------------------------------------------------------------------
+creacion de tags 
+------------------------------------------------------------
+git tag -a v0.1 -m  <mensaje agregado>
+exmaple:
+git tag -a v0.1 -m "primeros comandos de git"
+git tag ,  muestra la lista de todos los tags 
+para mirar con que commit esta relacionado un tag
+git show-ref --tags
+---------------------------------------------------------
+para ver que todo loq ue esta en intener traeresles usar el comando
+git pull  origin master or in new version s main
+git push origin --tags
