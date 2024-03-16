@@ -176,7 +176,6 @@ git show-ref --tags
 ---------------------------------------------------------
 para ver que todo loq ue esta en intener traeresles usar el comando
 git pull  origin master or in new version s main
-<<<<<<< HEAD
 git push origin --tags
 ----------------------------------------------------------------------
 como borrar un tag
@@ -210,6 +209,7 @@ git branch nombre-de-la-rama o git checkout -b nombre-de-la-rama.
 Publicar una rama local al repositorio remoto:
 git push origin nombre-de-la-rama.
 Recuerda que podemos ver gráficamente nuestro entorno y flujo de trabajo local con Git utilizando el comando gitk. Gitk fue el primer visor gráfico que se desarrolló para ver de manera gráfica el historial de un repositorio de Git.
-=======
-git push origin --tags
->>>>>>> 73518e5dee7eaf17bd4667fa375f42a811b776a3
+--------------------------------------------------------------------´
+para cloanr un repositorio 
+git clone <link del repo>
+-----------------------------------------------------
